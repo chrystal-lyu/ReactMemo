@@ -6,7 +6,7 @@ var Memo = React.createClass({
 
     return (
       <div>
-        <div>{id}. {name}</div>
+        <div>{name}</div>
         <div>{story}</div>
       </div>
     )
