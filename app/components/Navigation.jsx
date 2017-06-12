@@ -19,7 +19,7 @@ var Navigation = () => {
             <form>
               <ul className="menu">
                 <li>
-                  <input type="search" placeholder="Search memo by name" ref="search"/>
+                  <input type="search" placeholder="Search memo by name"/>
                 </li>
                 <li>
                   <input type="submit" className="button" value="Get Memo"/>
