@@ -21,7 +21,7 @@ var AddMemo = React.createClass({
         <form onSubmit={this.handleSubmit}>
           <input type="text" ref="memoName" placeholder="Who?"/>
           <textarea type="text" ref="memoStory" placeholder="What's the story?"/>
-          <button className="botton expanded">Add Memo</button>
+          <button className="button expanded">Add Memo</button>
         </form>
       </div>
     );
