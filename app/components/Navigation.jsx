@@ -29,6 +29,10 @@ var Navigation = React.createClass({
             <li>
               <Link to="/about" activeClassName="active-link">About</Link>
             </li>
+          </ul>
+        </div>
+        <div className="top-bar-right">
+          <ul className="menu">
             <li>
               <form onSubmit={this.onSearch}>
                 <ul className='menu'>
@@ -41,10 +45,6 @@ var Navigation = React.createClass({
                 </ul>
               </form>
             </li>
-          </ul>
-        </div>
-        <div className="top-bar-right">
-          <ul className="menu">
             <li className="menu-text">
               Created by <a href="http://www.mead.io" target="_blank">Crystal Lu</a>
             </li>

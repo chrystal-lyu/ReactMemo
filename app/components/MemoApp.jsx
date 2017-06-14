@@ -41,14 +41,14 @@ var MemoApp = React.createClass({
 
     return(
       <div>
-        <div className="">
+        <div className="row">
           <div className="">
             <div className="">
-              <div id="left">
+              <div id="left" className="column small-12 meidum-3 large-3">
                 <h1 className="page-title">Search memos</h1>
                 <MemoSearch onSearch={this.handleSearch}/>
               </div>
-              <div id="right">
+              <div id="right" className="column small-12 meidum-9 large-9">
                 <h1 className="page-title">Who did you meet today?</h1>
                 <AddMemo onAddMemo={this.handleAddMemo}/>
                 <MemoList memos={filteredMemos}/>
