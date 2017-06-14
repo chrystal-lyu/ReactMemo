@@ -1,5 +1,6 @@
 var React = require('react');
 var uuid = require('uuid');
+var moment = require('moment');
 
 var MemoList = require('MemoList');
 var AddMemo = require('AddMemo');
@@ -22,7 +23,8 @@ var MemoApp = React.createClass({
         {
           id: uuid(),
           name: name,
-          story: story
+          story: story,
+          createdAt: moment().unix()
         },
         ...this.state.memos
       ]

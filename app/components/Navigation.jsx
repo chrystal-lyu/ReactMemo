@@ -10,7 +10,6 @@ var Navigation = React.createClass({
     var name = this.refs.search.value;
     if(name.length > 0) {
       this.refs.search.value = '';
-      // window.location.hash = '#/';
       this.setState({
         searchName: name.toLowerCase()
       })
