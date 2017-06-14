@@ -34,13 +34,14 @@ var MemoApp = React.createClass({
     });
   },
   render: function() {
-    var {memos} = this.state;
+    var {memos, searchName} = this.state;
+    var filteredMemos = MemoAPI.filterMemos(memos, searchName);
 
     return(
       <div>
         <MemoSearch onSearch={this.handleSearch}/>
         <AddMemo onAddMemo={this.handleAddMemo}/>
-        <MemoList memos={memos}/>
+        <MemoList memos={filteredMemos}/>
       </div>
     )
   }

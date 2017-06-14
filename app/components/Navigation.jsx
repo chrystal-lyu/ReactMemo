@@ -2,12 +2,19 @@ var React = require('react');
 var {Link, IndexLink} = require('react-router');
 
 var MemoSearch = require('MemoSearch');
+var MemoAPI = require('MemoAPI');
+var MemoApp = require('MemoApp');
 
 var Navigation = React.createClass({
-  handleSearch: function(searchName) {
-    this.setState({
-      searchName: searchName.toLowerCase()
-    });
+  onSearch: function() {
+    var name = this.refs.search.value;
+    if(name.length > 0) {
+      this.refs.search.value = '';
+      // window.location.hash = '#/';
+      this.setState({
+        searchName: name.toLowerCase()
+      })
+    }
   },
   render: function() {
     return (
@@ -24,7 +31,16 @@ var Navigation = React.createClass({
               <Link to="/about" activeClassName="active-link">About</Link>
             </li>
             <li>
-              <MemoSearch onSearch={this.handleSearch}/>
+              <form onSubmit={this.onSearch}>
+                <ul className='menu'>
+                  <li>
+                    <input type='search' ref='search' placeholder='Enter name'/>
+                  </li>
+                  <li>
+                    <input type='submit' className='button' value='Search Memo'/>
+                  </li>
+                </ul>
+              </form>
             </li>
           </ul>
         </div>

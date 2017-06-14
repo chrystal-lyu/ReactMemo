@@ -18,5 +18,15 @@ module.exports = {
     }
 
     return $.isArray(memos) ? memos : [];
+  },
+  filterMemos: function(memos, searchName) {
+    var filteredMemos = memos;
+
+    filteredMemos = filteredMemos.filter((memo) => {
+      var name = memo.name.toLowerCase();
+      return searchName.length === 0 || name.indexOf(searchName) > -1;
+    });
+
+    return filteredMemos;
   }
 };
