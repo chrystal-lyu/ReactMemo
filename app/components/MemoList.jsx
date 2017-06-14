@@ -17,7 +17,7 @@ var MemoList = React.createClass({
         {renderMemos()}
       </div>
     )
-  } 
+  }
 });
 
 module.exports = MemoList;
