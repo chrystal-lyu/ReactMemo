@@ -1,0 +1,21 @@
+.container {
+  background: $light-grey;
+  border: 1px solid $light-grey-border;
+  border-radius: 5px;
+  padding: 0;
+  margin-bottom: 2rem;
+  width: 500px;
+}
+
+#left {
+  width: 300px;
+  float: left;
+  margin-left: 10rem;
+}
+
+#right {
+  width: 500px;
+  margin-left: 500px;
+  border-left: 8px solid #eee;
+  padding-left: 10px
+}

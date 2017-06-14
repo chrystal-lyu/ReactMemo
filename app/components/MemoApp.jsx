@@ -41,9 +41,21 @@ var MemoApp = React.createClass({
 
     return(
       <div>
-        <MemoSearch onSearch={this.handleSearch}/>
-        <AddMemo onAddMemo={this.handleAddMemo}/>
-        <MemoList memos={filteredMemos}/>
+        <div className="">
+          <div className="">
+            <div className="">
+              <div id="left">
+                <h1 className="page-title">Search memos</h1>
+                <MemoSearch onSearch={this.handleSearch}/>
+              </div>
+              <div id="right">
+                <h1 className="page-title">Who did you meet today?</h1>
+                <AddMemo onAddMemo={this.handleAddMemo}/>
+                <MemoList memos={filteredMemos}/>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

@@ -11,9 +11,9 @@ var Memo = React.createClass({
     };
 
     return (
-      <div>
-        <div className="name">{name}</div>
-        <div className="todo-subtext">{renderDate()}</div>
+      <div className="todo">
+        <div className="todo__name">{name}</div>
+        <div className="todo__subtext">{renderDate()}</div>
         <div>{story}</div>
       </div>
     )
